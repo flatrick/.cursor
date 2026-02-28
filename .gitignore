@@ -47,9 +47,13 @@ plans/**
 !commands/
 !commands/**
 
-# Subagent state/transcripts
+# Subagent state/transcripts (runtime output; optional to track)
 !subagents/
 !subagents/**
+
+# User-level subagent definitions
+!agents/
+!agents/**
 
 # User-level cursor rules
 !rules/
