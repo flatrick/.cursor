@@ -1,0 +1,39 @@
+# Ignore everything in .cursor, then un-ignore only what we want to version
+*
+
+# Built-in Cursor skills (managed by Cursor; overwritten on updates; avoid merge conflicts)
+/skills-cursor/
+
+# Installed extensions (large, machine-specific, fetched by Cursor/IDE)
+/extensions/
+
+# Ephemeral session files (machine-specific, not portable)
+/plans/
+/projects/
+/subagents/
+
+# Runtime state and tracking (regenerated, not portable)
+/ai-tracking/
+/snapshots/
+/worktrees/
+
+# IDE/launch state (machine-specific)
+/ide_state.json
+/argv.json
+
+# Un-ignore config we want to version
+# User's personal skills
+!skills/
+!skills/**
+# User's personal slash commands
+!commands/
+!commands/**
+# User-level cursor rules
+!rules/
+!rules/**
+
+# Common editor/OS noise (never track, even in un-ignored dirs)
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
