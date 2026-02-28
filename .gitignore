@@ -1,39 +1,23 @@
-# Ignore everything in .cursor, then un-ignore only what we want to version
+# Ignore everything in .cursor
 *
-
-# Built-in Cursor skills (managed by Cursor; overwritten on updates; avoid merge conflicts)
-/skills-cursor/
-
-# Installed extensions (large, machine-specific, fetched by Cursor/IDE)
-/extensions/
-
-# Ephemeral session files (machine-specific, not portable)
-/plans/
-/projects/
-/subagents/
-
-# Runtime state and tracking (regenerated, not portable)
-/ai-tracking/
-/snapshots/
-/worktrees/
-
-# IDE/launch state (machine-specific)
-/ide_state.json
-/argv.json
-
-# Un-ignore config we want to version
+# Un-ignore projects so we can descend to allowlisted subdirs
+# MCP tool descriptors, resources, prompts
+# Agent transcripts for citation
+# Terminal output files
+# Conversation notes (shared scratchpad)
+# Large tool output files
+# Plugin cache (rules, skills, agents)
+# Built-in Cursor skills
 # User's personal skills
 !skills/
 !skills/**
 # User's personal slash commands
 !commands/
 !commands/**
+# User's plan files
+# Subagent state/transcripts
+!subagents/
+!subagents/**
 # User-level cursor rules
 !rules/
 !rules/**
-
-# Common editor/OS noise (never track, even in un-ignored dirs)
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
