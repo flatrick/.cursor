@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Write(/home/flatrick/.cursor/plans/**)",
+      "Write(/home/flatrick/.cursor/commands/**)",
+      "Write(/home/flatrick/.cursor/agents/**)",
+      "Write(/home/flatrick/.cursor/skills/**)",
+      "Write(/home/flatrick/.cursor/rules/**)",
+      "Write(/home/flatrick/.cursor/cli-config.json)"
+    ],
+    "deny": []
+  }
+}
