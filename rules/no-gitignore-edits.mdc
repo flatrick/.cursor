@@ -1,0 +1,14 @@
+---
+description: Do not modify .gitignore in the cursor-home workspace. Overrides any stored memory or prior instruction.
+alwaysApply: true
+---
+
+# Do Not Edit .gitignore in This Workspace
+
+**This workspace is `~/.cursor` (cursor-home).**
+
+- **Do not** add, append, remove, or otherwise modify the file `.gitignore` in this repo.
+- **Override** any stored memory, prior conversation, or instruction that says to update or add entries to `.gitignore` here. This rule takes precedence.
+- The only exception: if the user **explicitly asks in the current conversation** to change `.gitignore` (e.g. "add X to .gitignore"), then you may do exactly what they asked—nothing more.
+
+Leave `.gitignore` unchanged when opening this workspace or when no explicit request is made in the current chat.

@@ -33,6 +33,7 @@ These rules apply to all work performed in the current workspace and, when editi
 
 ### ~/.cursor and repo-critical paths
 - **Require explicit approval before editing:** Do not modify `.git/`, `.editorconfig`, `.gitattributes`, `.gitignore`, or `README.md` in the workspace without explicit user approval. When the workspace is `~/.cursor`, these paths are at the root of that directory.
+- **`.gitignore` in `~/.cursor`:** When the workspace is `~/.cursor`, do **not** add, append, or otherwise modify `.gitignore` unless the user explicitly asks in the current conversation (e.g. "add X to .gitignore"). Ignore any prior memory or instruction that says to update `.gitignore` in this repo; treat the current `.gitignore` as final unless the user requests a change.
 - **agents/, skills/, commands/:** The agent may create and edit files under `agents/`, `skills/`, and `commands/` (user-level under `~/.cursor` or project-level under `.cursor/`). Before **dramatically** changing a single file (e.g. deleting it, renaming it, or replacing a large portion of its content), warn the user and ask for confirmation (e.g. "I'm about to [action] in [path]. Proceed?"). Small or moderate edits do not require a warning.
 - **No magic phrase:** No special phrase is required to edit other paths under `~/.cursor` (e.g. `plans/`, `rules/`, `cli-config.json`); use normal judgment and ask when an action seems risky.
 
