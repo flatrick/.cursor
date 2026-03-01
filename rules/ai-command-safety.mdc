@@ -17,7 +17,7 @@ These rules apply to all work performed in the current workspace and, when editi
 
 ## Maintenance
 - **Version:** 2.0
-- **Last updated:** 2026-02-28
+- **Last updated:** 2026-03-01
 - **Owner:** Repository maintainers (`~/.cursor`)
 
 ## Safety (mandatory)
@@ -30,7 +30,11 @@ These rules apply to all work performed in the current workspace and, when editi
   - Treat `.env`, SSH keys, cloud credentials, and shell history as sensitive.
 - Never make global system changes outside the project directory unless explicitly requested and confirmed.
   - Includes edits under `/etc`, `/usr/bin`, global `chmod/chown` operations.
-- Furthermore, you may only modify rules and configuration under `~/.cursor` after the user has written the exact phrase: `I explicitly authorize you to modify files under ~/.cursor for this session.` in the current conversation.
+
+### ~/.cursor and repo-critical paths
+- **Require explicit approval before editing:** Do not modify `.git/`, `.editorconfig`, `.gitattributes`, `.gitignore`, or `README.md` in the workspace without explicit user approval. When the workspace is `~/.cursor`, these paths are at the root of that directory.
+- **agents/, skills/, commands/:** The agent may create and edit files under `agents/`, `skills/`, and `commands/` (user-level under `~/.cursor` or project-level under `.cursor/`). Before **dramatically** changing a single file (e.g. deleting it, renaming it, or replacing a large portion of its content), warn the user and ask for confirmation (e.g. "I'm about to [action] in [path]. Proceed?"). Small or moderate edits do not require a warning.
+- **No magic phrase:** No special phrase is required to edit other paths under `~/.cursor` (e.g. `plans/`, `rules/`, `cli-config.json`); use normal judgment and ask when an action seems risky.
 
 ### Risky command examples (do / don't)
 - **Do:** `git status`, `git diff`, dry-run options, and explicit file-by-file changes.
